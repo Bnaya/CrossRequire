@@ -1,0 +1,19 @@
+{
+  "name": "CrossRequire",
+  "version": "0.0.1",
+  "homepage": "https://github.com/Bnaya/CrossRequire",
+  "description": "Crossrider app skeleton to work with requirejs/amd",
+  "private": false,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~1.10.2",
+    "requirejs": "~2.1.9",
+    "underscore-amd": "~1.5.2"
+  }
+}
