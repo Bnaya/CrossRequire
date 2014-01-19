@@ -1,7 +1,7 @@
 extension.zip
 *.sublime-workspace
 *.sublime-project
-resources/vendor/*
+resources/vendor/
 !resources/vendor/.gitignore
 
 # vendor files that we want to check in
