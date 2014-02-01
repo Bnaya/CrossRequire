@@ -15,12 +15,15 @@ if (appAPI.platform === 'FF') {
 // We need to eval the require.js code on the topmost scope we've got.
 // If it will start making problems we can try indirect eval call
 // see: http://perfectionkills.com/global-eval-what-are-the-options/
+
+// We can't make it without some black magic
+/* jshint evil:true */
 eval(appAPI.resources.get('vendor/requirejs/require.js'));
 
 var execJsFile = function (resource) {
     var code = appAPI.resources.get(resource);
     eval(code);
-}
+};
 
 appAPI.ready(function() {
     appAPI.resources.includeJS = function (resource) {

@@ -1,6 +1,5 @@
 extension.zip
 *.sublime-workspace
-*.sublime-project
 resources/vendor/
 !resources/vendor/.gitignore
 
