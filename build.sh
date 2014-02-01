@@ -10,6 +10,7 @@ cp -r resources build-out
 
 rm -r build-out/resources/vendor
 
+# @todo That better be done with bower-copy
 bury_copy resources/vendor/underscore-amd/underscore-min.js build-out/resources/vendor/underscore-amd/underscore-min.js
 bury_copy resources/vendor/jquery/jquery.min.js             build-out/resources/vendor/jquery/jquery.min.js
 bury_copy resources/vendor/requirejs/require.js             build-out/resources/vendor/requirejs/require.js
