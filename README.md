@@ -16,29 +16,29 @@ It should copy all the relevant code to the build-out/ directory and zip it. (wi
 I hope to make it as bower package with simpler integration &| yeoman generator.
 
 <br>
-If you are yet if you are yet unfamiliar with Crossrider platform or JS AMD
+If you are yet unfamiliar with Crossrider platform or JS AMD
 - http://crossrider.com/ - cross browser extensions development platform
 - http://requirejs.org/docs/whyamd.html - Read why using modules is a must if your project is more then few lines
 
 ### Q&A
- - Can i use the same modules from the background & paga scope code?
+ - Can i use the same modules from the background & page scope code?
  <br> * Yes! You can use the same codebase for your page & background scope (even tho the built in `appAPI.resources.includeJS` is missing from the background scope). but ofc as long you are using apis that belongs to the current scope. it will make you code run but if you will  use unsupported appAPI methods you code will break
 <br><br>
  - Will requirejs sugar syntax will work?
- <br> * I think it will, try and tell me! (Imo its an ugly hack and i hate it!)
+ <br> * The suger syntax reported to be working
 <br><br>
  - Will requirejs plugins will work ? (like hbs, text, etc)
- <br> * Currently most of the plugins will not work out of the box but it is possible to make them
+ <br> * Currently most of the plugins will not work out of the box. It should be possible to make them though
 <br><br>
- - Debug mode and production workflow and differences?
- <br> * Generally yes, but the crossrider platform itself have its own issues sometimes
+ - Dose debug mode and production workflow have differences?
+ <br> * Generally no, but the crossrider platform itself have its own issues sometimes
 <br><br>
  - Why does jQuery & underscore is a dependency, isn't it build in as part of crossrider framework?
-  <br> * jQuery & underscore aren't required, its mainly for demonstration. but every js project needs underscore & the jQuery that comes with crossrider is outdated (last time i've checked $ as 1.7.1 and you could access also 1.4.1)
+  <br> * jQuery & underscore aren't required, its mainly for demonstration. but most js projects needs underscore & the jQuery that comes with crossrider is outdated (last time i've checked $ as 1.7.1 and you could access also 1.4.1)
 <br><br>
- - Why underscore & lodash (and don't try to replace)
+ - Why underscore and not lodash?
   <br> * something in lodash code (Apparently the access to Object.prototype) breaks on Firefox (Apparently because the code executed inside a web worker)<br>
-  Its not something in CrossRequire but in the crossrider engine. It took me ALOT of time to figure that it was lodash that breaking my code
+  Its not something in CrossRequire but in the crossrider engine. It took me ALOT of time to figure that it was lodash that breaks the code
 
 ### Thoughts on r.js. should i build ?
 When working with crossrider, concatenating all of JS files to one file won't help much for the traditional reasons:<br>
