@@ -3,6 +3,8 @@ extension.zip
 resources/vendor/
 !resources/vendor/.gitignore
 
+.DS_Store
+
 # vendor files that we want to check in
 !resources/vendor/underscore-amd/underscore-min.js
 !resources/vendor/jquery/jquery.min.js
