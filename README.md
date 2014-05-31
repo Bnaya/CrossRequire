@@ -8,12 +8,22 @@ Manually Tested on chrome, Firefox & Internet explorer. (Safari is missing)
 ### How to use/integrate
 Currently its best to use the repo code as the bootstrap for your crossrider project, but its possible to integrate it manually.
 <br>
-Don't overwrite the extension.js & background.js, edit js/init.js and change the require calls to load your extension / background code startup file.
+Don't overwrite the extension.js & background.js, edit js/init.js and change the require calls to load your extension / background /popup code startup file.
 <br>
-When you want to push code to crossrider after working in debug mode, use build.sh (take a look at build.sh and modify for your vendor files).
+When you want to push code to crossrider.com after working in debug mode, use build.sh (take a look at build.sh and modify for your vendor files).
 It should copy all the relevant code to the build-out/ directory and zip it. (windows users you can run bash if you're using Msysgit/Cygwin cmd. about the zip command i'm not sure but i guess you can add it to your path and it will work)
-<br>
-I hope to make it as bower package with simpler integration &| yeoman generator.
+
+<b>Browser button popup</b>
+http://docs.crossrider.com/#!/api/appAPI.browserAction-method-setPopup
+
+To use CrossRequire in the browser action popup you will need to use the code snippet from
+https://github.com/Bnaya/CrossRequire/blob/master/popup-code-snippet.js
+inside your html file and edit init.js to point to your main popup js file.
+A wroking example on this setup is also part of the base project.
+look at
+https://github.com/Bnaya/CrossRequire/blob/master/resources/popup.html
+and
+https://github.com/Bnaya/CrossRequire/blob/master/resources/js/CrossRequire/example-popup.js
 
 <br>
 If you are yet unfamiliar with Crossrider platform or JS AMD
